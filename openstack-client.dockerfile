@@ -26,6 +26,8 @@ RUN apk del \
 
 COPY docker-entrypoint.sh docker-entrypoint.sh
 
+RUN chmod 744 docker-entrypoint.sh
+
 VOLUME [ "/data" ]
 
 ENTRYPOINT [ "./docker-entrypoint.sh", "openstack" ]
