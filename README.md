@@ -1,13 +1,14 @@
 # OpenStack Docker Client
 
-OpenStack Client in Docker.
+OpenStack Client in Docker. Based on Alpine Linux.
 
-Current client version is `5.2.0`.
+* Current client version is `5.2.0`.
+* Current designate plugin version is `4.0.0`.
 
-## Supported tags
+## Supported tags and respective `Dockerfile` links
 
-* `5.2.0`, `latest`
-
+* [`5.2.0`, `5.2`, `5`, `latest`](./openstackclient.5.2.0.dockerfile) - main client
+* [`5.2.0-designate`, `5.2-designate`, `5-designate`, `designate`](./designateclient.4.0.0.dockerfile) - main client with `python-designateclient` for DNS management
 ## Usage
 
 You can mount `your-openrc.sh` (which can be downloaded from OpenStack's web interface) to container's `/data/openrc.sh` which will be executed before starting OpenStack client:

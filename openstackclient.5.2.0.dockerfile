@@ -13,16 +13,8 @@ RUN pip3 install --upgrade --no-cache-dir \
     pip \
     setuptools
 
-ARG OPENSTACKCLIENT_VERSION=5.2.0
 RUN pip3 install --upgrade --no-cache-dir \
-    python-openstackclient==$OPENSTACKCLIENT_VERSION
-
-RUN apk del \
-    gcc \
-    musl-dev \
-    libffi-dev \
-    openssl-dev \
-    ca-certificates
+    python-openstackclient==5.2.0
 
 COPY docker-entrypoint.sh docker-entrypoint.sh
 
